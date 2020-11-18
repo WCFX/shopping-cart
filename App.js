@@ -1,21 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { useFonts } from 'expo-font';
+
+import { Nunito_400Regular,Nunito_600SemiBold,Nunito_700Bold } from '@expo-google-fonts/nunito';
+import { Poppins_400Regular,Poppins_600SemiBold,Poppins_700Bold } from '@expo-google-fonts/poppins';
+import { Archivo_400Regular,Archivo_600SemiBold,Archivo_700Bold} from '@expo-google-fonts/archivo';
+
+
+import Routes from './src/routes/routes';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  const [fontsLoaded] = useFonts({
+    Nunito_400Regular,
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Poppins_400Regular,
+    Poppins_600SemiBold,
+    Poppins_700Bold,
+    Archivo_400Regular,
+    Archivo_600SemiBold,
+    Archivo_700Bold
+  });
+
+  if(!fontsLoaded){
+    return null;
+  }
+  
+  return (
+    <>
+      <Routes />
+      <StatusBar style="light" />
+    </>
+  );
+};
