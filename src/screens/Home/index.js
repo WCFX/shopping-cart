@@ -6,6 +6,8 @@ import backgroundImg from '../../assets/background-1.jpeg';
 
 import styles from './styles';
 
+const { navigation } = useNavigation();
+
 const Home = () => {
   return(
     <View style={styles.container}>
