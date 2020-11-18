@@ -6,9 +6,15 @@ import backgroundImg from '../../assets/background-1.jpeg';
 
 import styles from './styles';
 
-const { navigation } = useNavigation();
 
 const Home = () => {
+  
+  const { navigate } = useNavigation();
+
+  function handleNavigateToPayment(){
+    navigate('PaymentScreen')
+  }
+
   return(
     <View style={styles.container}>
       <ImageBackground 
@@ -16,7 +22,10 @@ const Home = () => {
         style={styles.backgroundImg}
       >
         <Text style={styles.title}>Vamos para {'\n'}o seu pedido ?</Text>
-        <TouchableOpacity style={styles.buttonOrder}>
+        <TouchableOpacity
+          onPress={handleNavigateToPayment}  
+          style={styles.buttonOrder}
+        >
           <Text style={styles.buttonOrderText}>FINALIZE SEU PEDIDO</Text>
         </TouchableOpacity>
       </ImageBackground>

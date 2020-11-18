@@ -31,7 +31,7 @@ export default function App() {
   return (
     <>
       <Routes />
-      <StatusBar style="light" />
+      <StatusBar style="light" statusBarStyle="light" backgroundColor="#01868b"/>
     </>
   );
 };

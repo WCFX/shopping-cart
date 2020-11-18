@@ -12,7 +12,15 @@ const { Navigator, Screen } = createStackNavigator();
 export default function routes(){
   return(
     <NavigationContainer>
-      <Navigator>
+      <Navigator 
+        screenOptions={{
+          title: 'Finalizar Pedido',
+          headerStyle: {
+            backgroundColor: '#00d4df',
+          },
+          headerTintColor: '#fff',
+        }}
+      >
         <Screen
           options={{
             headerShown: false
@@ -21,9 +29,6 @@ export default function routes(){
           component={Home}
         />
         <Screen
-          options={{
-            title: 'Finalizar Pedido'
-          }}
           name="PaymentScreen"
           component={PaymentScreen}
         />
