@@ -1,35 +1,40 @@
 import React from 'react';
-import { View, SafeAreaView, Text, FlatList } from 'react-native';
+import { View, SafeAreaView, Text, FlatList, TouchableOpacity} from 'react-native';
+import { Feather } from '@expo/vector-icons';
 
-import dataInform from '../../data';
+import data from '../../data';
 
 import styles from './styles';
 
 const PaymentScreen = () => {
+
+
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        data={dataInform}
+        data={data}
         renderItem={({ item }) => {
+        
           return(
-            <View>
-              <Text 
-                style={styles.title}
-              >
-                {item.title}
-              </Text>
+            <View style={styles.containerFlatlist}>
 
-              <Text
-                style={styles.description}
-              >
-                {item.description}
-              </Text>
+              <View style={styles.containerItem}>
+                <TouchableOpacity style={styles.buttonTitle}>
+                  <Text style={styles.title}>{item.title}</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity >
+                  <Text style={styles.price}>{item.price}</Text>
+                </TouchableOpacity>
+
+              </View>
               
-              <Text
-                style={styles.price}
-              >
-                {item.price}
-              </Text>
+              <View style={styles.containerItem}>
+                <TouchableOpacity>
+                  <Text style={styles.description}> {item.description}</Text>
+                </TouchableOpacity>
+              </View>
+
             </View>
           )
         }}
