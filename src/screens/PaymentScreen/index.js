@@ -6,7 +6,7 @@ import styles from './styles';
 const PaymentScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Hello World!</Text>
+      <Text style={styles.title}>Hello World!!</Text>
     </SafeAreaView>
   );
 }
