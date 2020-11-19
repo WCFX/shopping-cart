@@ -3,12 +3,12 @@ import React from 'react';
   const data = [
     {
       id: '1', 
-      food: 'Água sem gás',
-      price: '3.00'
+      food: 'Água 600ml Sarandi',
+      price: '2.50'
     },
     {
       id: '2',
-      food: 'Xis-Burguer',
+      food: 'Big Burguer',
       price: '39.90',
       sideDish: [
         {
@@ -23,7 +23,7 @@ import React from 'react';
     },
     {
       id: '3', 
-      food: 'Esfirra',
+      food: '6 Esfirras',
       price: '4.00',
       sideDish: [
         {
@@ -31,19 +31,19 @@ import React from 'react';
           price: '1.00'
         },
         {
-          condition: 'Dobro de queijo',
+          condition: 'Dobro de Queijo',
           price: '2.00'
         }
       ]
     },
     {
       id: '4',
-      food: 'Combo da semana',
+      food: 'Entreveiro de Strogonoff',
       price: '24.90'
     },
     {
       id: '5',
-      food: 'Duplo de coração',
+      food: 'Duplo de Coração',
       price: '14.90',
       sideDish: [
         {
@@ -51,7 +51,7 @@ import React from 'react';
           price: '0.00'
         },
         {
-          condition: 'Molho barbecue',
+          condition: 'Molho Barbecue',
           price: '1.50'
         },
         {
@@ -67,11 +67,11 @@ import React from 'react';
       price: '49.90',
       sideDish: [
         {
-          condition: 'Molho supreme',
+          condition: 'Molho Supreme',
           price: '0.00'
         },
         {
-          condition: 'Molho barbecue',
+          condition: 'Molho Barbecue',
           price: '1.50'
         },
         {

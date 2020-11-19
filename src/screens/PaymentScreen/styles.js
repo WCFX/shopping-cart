@@ -9,20 +9,23 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomLeftRadius: 10,
     borderColor: '#ccc',
-    paddingHorizontal: 20,
+    marginHorizontal: 20,
     marginTop: 20,
   },
   textFood: {
     fontFamily: 'Nunito_700Bold',
-    fontSize: 18,
+    fontSize: 22,
+    color: '#424242',
   },
   textSideDish: {
     fontFamily: 'Nunito_600SemiBold',
-    fontSize: 18,
+    fontSize: 16,
+    color: '#595959',
   },
   textPrice: {
     fontFamily: 'Nunito_700Bold',
     fontSize: 18,
+    color: '#424242',
   },
   buttonFood: {
     flexDirection: 'row',

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Feather } from '@expo/vector-icons';
 
 import backgroundImg from '../../assets/background-1.jpeg';
 
@@ -17,16 +18,20 @@ const Home = () => {
 
   return(
     <View style={styles.container}>
-      <ImageBackground 
+      <ImageBackground
+        
         source={backgroundImg}
         style={styles.backgroundImg}
       >
-        <Text style={styles.title}>Vamos para {'\n'}o seu pedido ?</Text>
+        <Text style={styles.title}>Vamos para o {'\n'}seu carrinho ?</Text>
         <TouchableOpacity
           onPress={handleNavigateToPayment}  
           style={styles.buttonOrder}
         >
-          <Text style={styles.buttonOrderText}>FINALIZE SEU PEDIDO</Text>
+          <Text style={styles.buttonOrderText}>
+            <Feather name="shopping-cart" size={24} />
+            {'   '}CARRINHO DE COMPRAS
+            </Text>
         </TouchableOpacity>
       </ImageBackground>
     </View>
