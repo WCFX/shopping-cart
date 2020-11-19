@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, SafeAreaView, Text, FlatList, TouchableOpacity} from 'react-native';
-import data from '../../data';
+import { Feather } from '@expo/vector-icons';
 
+import data from '../../data';
 import styles from './styles';
 
 const PaymentScreen = () => {
@@ -11,25 +12,38 @@ const PaymentScreen = () => {
     <SafeAreaView style={styles.container}>
       <FlatList
         data={data}
-        renderItem={({ item, index }) => {
+        renderItem={({ item }) => {
           return(
             <View style={styles.containerItem}>
               <TouchableOpacity style={styles.buttonFood}>
                 <Text style={styles.textFood}>
-                  {item.food}
+                {'   '}{item.food}
                 </Text>
-                <Text style={styles.textFood}>
-                  {item.price}
-                </Text>                
+                <Text style={styles.textPrice}>R$ {item.price}{'      '}
+                  <Feather 
+                    style={{ color: '#ca0d00' }}
+                    name="minus-circle"
+                    size={28}
+                  />       
+                </Text>
               </TouchableOpacity>
 
+              <View style={styles.sideDishContainerColumn}>
                 {item?.sideDish?.map((itemMap) => (
-                <>
-                  <Text>{itemMap.condition} </Text>
-                  <Text>{itemMap.price} </Text>
-                </>
+                <View style={styles.sideDishContainerRow}>
+                  <Text style={styles.textSideDish}>
+                  {'   '}{itemMap.condition}
+                  </Text>
+                  <Text style={styles.textPrice}>R${itemMap.price}{'      '}
+                    <Feather 
+                      style={{ color:'#ca0d00' }}
+                      name="minus-circle"
+                      size={28}
+                    /> 
+                  </Text>
+                </View>
                 ))}
-
+              </View>
             </View>
           )
         }}

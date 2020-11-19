@@ -5,20 +5,40 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  containerFlatlist: {
-    
-  },
   containerItem: {
-    marginTop: 20,
-    flexDirection: 'column',
     borderBottomWidth: 1,
-    borderColor: '#ccc'
+    borderBottomLeftRadius: 10,
+    borderColor: '#ccc',
+    paddingHorizontal: 20,
+    marginTop: 20,
+  },
+  textFood: {
+    fontFamily: 'Nunito_700Bold',
+    fontSize: 18,
+  },
+  textSideDish: {
+    fontFamily: 'Nunito_600SemiBold',
+    fontSize: 18,
+  },
+  textPrice: {
+    fontFamily: 'Nunito_700Bold',
+    fontSize: 18,
   },
   buttonFood: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
+  },
+  sideDishContainerColumn: {
+    flexDirection: 'column',
+    marginVertical: 20,
+
+  },
+  sideDishContainerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 5,
   }
+  
 });
 
 
