@@ -1,18 +1,26 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { View } from 'react-native';
 
-const CardContext = createContext();
+const CartContext = createContext();
 
 export default function CartProvider({ children }) {
   const [ cart, setCart ] = useState([]);
-  const [balance, setBalance] = useState(0);
+  const [ balance, setBalance] = useState();
   const [ totalValue, setTotalValue ] = useState();
 
+  useEffect(() => {
+    let value = 0
+    cart.map((item) => {
+      value = value + item.price
+    })
+
+    setTotalValue(value)
+  }, [cart])
+
   function handleAddNewItem(item){
-    const newCart = cart;
+    const newCart = cart
     newCart.push(item)
 
-    setCart(newCart)
+    setCart([...newCart])
   }
 
   const store = {
@@ -23,14 +31,14 @@ export default function CartProvider({ children }) {
   }
 
   return(
-    <CardContext.Provider value={store}>
+    <CartContext.Provider value={store}>
       {children}
-    </CardContext.Provider>
+    </CartContext.Provider>
   )
 };
 
 export function useCart(){
-  const context = useContext(cartContext);
+  const context = useContext(CartContext);
 
   const {
     cart,

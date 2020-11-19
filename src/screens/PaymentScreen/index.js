@@ -1,13 +1,23 @@
-import React from 'react';
-import { View, SafeAreaView, Text, FlatList, TouchableOpacity} from 'react-native';
+import React, { useState } from 'react';
+import {
+  View,
+  SafeAreaView,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  ScrollView,
+  TextInput,
+} from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 import data from '../../data';
+import { useCart } from '../../context/cart';
+
 import styles from './styles';
 
 const PaymentScreen = () => {
 
-  
+  const { handleAddNewItem } = useCart();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -16,7 +26,10 @@ const PaymentScreen = () => {
         renderItem={({ item }) => {
           return(
             <View style={styles.containerItem}>
-              <TouchableOpacity style={styles.buttonFood}>
+              <TouchableOpacity 
+                onPress={() => handleAddNewItem(item)}
+                style={styles.buttonFood}
+              >
                 <Text style={styles.textFood}>
                 {'   '}{item.food}
                 </Text>
@@ -30,8 +43,10 @@ const PaymentScreen = () => {
               </TouchableOpacity>
 
               <View style={styles.sideDishContainerColumn}>
-                {item?.sideDish?.map((itemMap) => (
-                <View style={styles.sideDishContainerRow}>
+                {item?.sideDish?.map((itemMap, index) => (
+                <View
+                key={index}
+                style={styles.sideDishContainerRow}>
                   <Text style={styles.textSideDish}>
                   {'   '}{itemMap.condition}
                   </Text>
@@ -45,6 +60,7 @@ const PaymentScreen = () => {
                 </View>
                 ))}
               </View>
+              
             </View>
           )
         }}
@@ -52,6 +68,37 @@ const PaymentScreen = () => {
       >
 
       </FlatList>
+      <ScrollView 
+        style={styles.containerOrder}
+      >
+        <View style={styles.containerOrderValue}>
+          <Text style={styles.totalItensText}>Total itens</Text>
+          <Text style={styles.totalItensText}>R$0.00</Text>
+        </View>
+
+        <View style={styles.containerOrderValue}>
+          <Text style={styles.totalItensText}>Taxa de entrega</Text>
+          <Text style={styles.totalItensText}>R$5.00</Text>
+        </View>
+
+        <View style={styles.containerOrderValue}>
+          <Text style={styles.totalItensText}>Total do pedido</Text>
+          <Text style={styles.totalItensText}>R$0.00</Text>
+        </View>
+
+        <View style={styles.containerOrder}>
+          <Text style={styles.textOrder}>Observações</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Ex: Tirar cebola, por favor." 
+          />
+        </View>
+
+        <View style={styles.containerOrder}>
+          <Text style={styles.textOrder}>Método de pagamento</Text>
+        </View>
+
+      </ScrollView>
     </SafeAreaView>
   );
 }
