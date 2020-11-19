@@ -5,14 +5,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from '../screens/Home';
 import PaymentScreen from '../screens/PaymentScreen';
-import CounterProvider from '../context/Cart';
+import ReviewOrder from '../screens/ReviewOrder';
+import CartProvider from '../context/Cart';
 
 
 const { Navigator, Screen } = createStackNavigator();
 
 export default function routes(){
   return(
-    <CounterProvider>
+    <CartProvider>
       <NavigationContainer>
         <Navigator 
           screenOptions={{
@@ -34,9 +35,13 @@ export default function routes(){
             name="PaymentScreen"
             component={PaymentScreen}
           />
+          <Screen
+            name="ReviewOrder"
+            component={ReviewOrder}
+          />
         </Navigator>
       </NavigationContainer> 
-    </CounterProvider>
+    </CartProvider>
     
   )
 };

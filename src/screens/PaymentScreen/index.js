@@ -9,16 +9,12 @@ import {
   TextInput,
 } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import { useCount } from '../../context/Cart';
 
 import data from '../../data';
 
 import styles from './styles';
 
 const PaymentScreen = () => {
-
-  const { count, setCount } = useCount();
-
 
   return (
     <SafeAreaView style={styles.container}>
@@ -27,9 +23,9 @@ const PaymentScreen = () => {
         renderItem={({ item }) => {
           return(
             <View style={styles.containerItem}>
-              <Text>{count}</Text>
+              <Text></Text>
               <TouchableOpacity 
-                onPress={() => setCount()}
+                onPress={() => {}}
                 style={styles.buttonFood}
               >
                 <Text style={styles.textFood}>

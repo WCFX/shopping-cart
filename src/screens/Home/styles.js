@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Archivo_700Bold',
     fontSize: 18,
     color: '#eee',
-
   }
 
 
