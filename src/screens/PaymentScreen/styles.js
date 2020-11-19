@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   totalItensText: {
     fontFamily: 'Nunito_600SemiBold',
-    fontSize: 16,
+    fontSize: 18,
     color: '#595959',
   },
   input: {
