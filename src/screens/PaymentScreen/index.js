@@ -1,7 +1,5 @@
 import React from 'react';
 import { View, SafeAreaView, Text, FlatList, TouchableOpacity} from 'react-native';
-import { Feather } from '@expo/vector-icons';
-
 import data from '../../data';
 
 import styles from './styles';
@@ -13,27 +11,24 @@ const PaymentScreen = () => {
     <SafeAreaView style={styles.container}>
       <FlatList
         data={data}
-        renderItem={({ item }) => {
-        
+        renderItem={({ item, index }) => {
           return(
-            <View style={styles.containerFlatlist}>
+            <View style={styles.containerItem}>
+              <TouchableOpacity style={styles.buttonFood}>
+                <Text style={styles.textFood}>
+                  {item.food}
+                </Text>
+                <Text style={styles.textFood}>
+                  {item.price}
+                </Text>                
+              </TouchableOpacity>
 
-              <View style={styles.containerItem}>
-                <TouchableOpacity style={styles.buttonTitle}>
-                  <Text style={styles.title}>{item.title}</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity >
-                  <Text style={styles.price}>{item.price}</Text>
-                </TouchableOpacity>
-
-              </View>
-              
-              <View style={styles.containerItem}>
-                <TouchableOpacity>
-                  <Text style={styles.description}> {item.description}</Text>
-                </TouchableOpacity>
-              </View>
+                {item?.sideDish?.map((itemMap) => (
+                <>
+                  <Text>{itemMap.condition} </Text>
+                  <Text>{itemMap.price} </Text>
+                </>
+                ))}
 
             </View>
           )
@@ -41,7 +36,7 @@ const PaymentScreen = () => {
         keyExtractor={(item) => item.id}
       >
 
-    </FlatList>
+      </FlatList>
     </SafeAreaView>
   );
 }
