@@ -33,6 +33,14 @@ const styles = StyleSheet.create({
     fontSize: 22,
     color: '#424242',
   },
+  containerPicker: {
+    width: '100%',
+  },
+  containerPickerText: {
+    fontFamily: 'Nunito_700Bold',
+    fontSize: 16,
+    color: '#424242',
+  },
 
 });
 

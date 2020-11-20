@@ -18,25 +18,24 @@ const ListItems = () => {
   const [cart, setCart ] = useState([]);
   const [selectItems, setSelectItems ] = useState([]);
 
-  const addToCart = (items) => {
-    setCart([...cart, items]);
-  }
+
   
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
         data={data}
+        keyExtractor={(item) => (item.id)}
         renderItem={({ item, index }) => {
+
           return(
             <View style={styles.containerItem}>
               <TouchableOpacity
-                onPress={(items) => addToCart(items)}
+                onPress={() => {}}
                 style={styles.buttonFood}
               >
-                
                 <Text style={styles.textFood}>
                   
-                {' '}{item.food}
+                {'  '}{item.food}
                 </Text>
 
                 <Text 
@@ -47,12 +46,9 @@ const ListItems = () => {
 
               <View style={styles.sideDishContainerColumn}>
                 {item?.sideDish?.map((itemMap, index) => (
-              <View
-                key={index}
-                // style={styles.sideDishContainerRow}>
-                >
+              <View key={index}>
                 <TouchableOpacity
-                  onPress={(items) => addToCart(items)}
+                  onPress={() => {}}
                   style={[styles.buttonAdd, styles.containerRow]}>
                   <Text style={styles.textSideDish}>
                     
@@ -71,7 +67,6 @@ const ListItems = () => {
             </View>
           )
         }}
-        keyExtractor={(item) => item.id}
       >
 
       </FlatList>
