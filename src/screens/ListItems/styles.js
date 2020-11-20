@@ -6,15 +6,24 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   containerItem: {
+    justifyContent: 'space-between',
     borderBottomWidth: 1,
     borderBottomLeftRadius: 10,
-    borderColor: '#ccc',
+    borderColor: '#00d4df',
     marginHorizontal: 20,
     marginTop: 20,
+  },
+  containerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 5,
+    paddingVertical: 5,
   },
   principalFood: {
     flexDirection:'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   textFood: {
     fontFamily: 'Nunito_700Bold',
@@ -34,6 +43,7 @@ const styles = StyleSheet.create({
   buttonFood: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   sideDishContainerColumn: {
     flexDirection: 'column',
@@ -42,10 +52,11 @@ const styles = StyleSheet.create({
   sideDishContainerRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     marginVertical: 5,
   },
   buttonAdd: {
-    shadowColor: "#000",
+    shadowColor: "#ccc",
     shadowOffset: {
 	    width: 0,
 	    height: 1,
@@ -56,6 +67,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
     paddingVertical: 2,
     borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#fff'
   },
   buttonAdd2: {
     paddingHorizontal: 10,

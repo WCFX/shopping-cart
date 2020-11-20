@@ -4,8 +4,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-   
-    backgroundColor: '#b9b9b9'
+    backgroundColor: '#f9f9f9'
   },
   containerOrder:{
     height: '35%',
@@ -13,7 +12,6 @@ const styles = StyleSheet.create({
     borderTopColor: '#00d4df',
     backgroundColor: '#e9e9e9',
     paddingHorizontal: 20,
-    marginTop: 20,
   },
   containerOrderValue:{
     flexDirection: 'row',

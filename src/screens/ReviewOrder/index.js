@@ -6,7 +6,10 @@ import styles from './styles';
 const ReviewOrder = () => {
   return(
     <View style={styles.container}>
-      <ScrollView 
+
+      
+
+      <View 
         style={styles.containerOrder}
       >
         <View style={styles.containerOrderValue}>
@@ -28,7 +31,7 @@ const ReviewOrder = () => {
           <Text style={styles.textOrder}>Método de pagamento</Text>
         </View>
 
-      </ScrollView>
+      </View>
     </View>
   )
 }

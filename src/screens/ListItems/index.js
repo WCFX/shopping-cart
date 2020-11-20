@@ -16,50 +16,49 @@ import styles from './styles';
 const ListItems = () => {
 
   const [cart, setCart ] = useState([]);
+  const [selectItems, setSelectItems ] = useState([]);
 
-  const addToCart = (data) => {
-    setCart([...cart, data]);
+  const addToCart = (items) => {
+    setCart([...cart, items]);
   }
   
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
         data={data}
-        renderItem={({ item }) => {
+        renderItem={({ item, index }) => {
           return(
             <View style={styles.containerItem}>
-              <View style={styles.principalFood}>
-
-              <TouchableOpacity 
-                onPress={() => {}}
+              <TouchableOpacity
+                onPress={(items) => addToCart(items)}
                 style={styles.buttonFood}
               >
+                
                 <Text style={styles.textFood}>
                   
-                {'   '}{item.food}
+                {' '}{item.food}
                 </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.buttonAdd, styles.buttonAdd2]}>
 
                 <Text 
                 style={styles.textPrice}>
-                  <Feather name="plus-circle" size={20} color="#1eba52" />{' '}
                   R$ {item.price}
                 </Text>
               </TouchableOpacity>
-            </View>
-            
 
               <View style={styles.sideDishContainerColumn}>
                 {item?.sideDish?.map((itemMap, index) => (
               <View
                 key={index}
-                style={styles.sideDishContainerRow}>
+                // style={styles.sideDishContainerRow}>
+                >
+                <TouchableOpacity
+                  onPress={(items) => addToCart(items)}
+                  style={[styles.buttonAdd, styles.containerRow]}>
                   <Text style={styles.textSideDish}>
                     
                   {'   '}{itemMap.condition}
                   </Text>
-                <TouchableOpacity style={styles.buttonAdd}>
+                
                   <Text style={styles.textPrice}>
                   <Feather name="plus-circle" size={20} color="#1eba52"/>{'  '}
                   R$ {itemMap.price}</Text>
