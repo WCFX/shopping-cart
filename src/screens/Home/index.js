@@ -13,7 +13,7 @@ const Home = () => {
   const { navigate } = useNavigation();
 
   function handleNavigateToPayment(){
-    navigate('PaymentScreen')
+    navigate('ListItems')
   }
 
   return(

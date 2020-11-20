@@ -7,12 +7,33 @@ const styles = StyleSheet.create({
    
     backgroundColor: '#b9b9b9'
   },
-  title: {
+  containerOrder:{
+    height: '35%',
+    borderTopWidth: 1,
+    borderTopColor: '#00d4df',
+    backgroundColor: '#e9e9e9',
+    paddingHorizontal: 20,
+    marginTop: 20,
+  },
+  containerOrderValue:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 10,
+  },
+  totalItensText: {
+    fontFamily: 'Nunito_600SemiBold',
     fontSize: 18,
-    color: '#000',
-    fontFamily: 'Poppins_700Bold',
-    marginVertical: 20,
-
+    color: '#595959',
+  },
+  input: {
+    borderBottomWidth: 1,
+    height: 40,
+    borderBottomColor: '#424242'
+  },
+  textOrder: {
+    fontFamily: 'Nunito_700Bold',
+    fontSize: 22,
+    color: '#424242',
   },
 
 });
