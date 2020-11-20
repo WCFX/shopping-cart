@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 36,
     color: '#eee',
-    fontFamily: 'Poppins_700Bold',
+    fontFamily: 'Archivo_700Bold',
     marginBottom: 20,
 
   },

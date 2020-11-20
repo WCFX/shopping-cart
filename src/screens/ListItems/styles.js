@@ -12,6 +12,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 20,
   },
+  principalFood: {
+    flexDirection:'row',
+    justifyContent: 'space-between',
+  },
   textFood: {
     fontFamily: 'Nunito_700Bold',
     fontSize: 22,
@@ -40,34 +44,41 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginVertical: 5,
   },
-  // containerOrder:{
-  //   height: '35%',
-  //   borderTopWidth: 1,
-  //   borderTopColor: '#00d4df',
-  //   backgroundColor: '#e9e9e9',
-  //   paddingHorizontal: 20,
-  //   marginTop: 20,
-  // },
-  // containerOrderValue:{
-  //   flexDirection: 'row',
-  //   justifyContent: 'space-between',
-  //   marginVertical: 10,
-  // },
-  // totalItensText: {
-  //   fontFamily: 'Nunito_600SemiBold',
-  //   fontSize: 18,
-  //   color: '#595959',
-  // },
-  // input: {
-  //   borderBottomWidth: 1,
-  //   height: 40,
-  //   borderBottomColor: '#424242'
-  // },
-  // textOrder: {
-  //   fontFamily: 'Nunito_700Bold',
-  //   fontSize: 22,
-  //   color: '#424242',
-  // },
+  buttonAdd: {
+    shadowColor: "#000",
+    shadowOffset: {
+	    width: 0,
+	    height: 1,
+    },
+    shadowOpacity: 0.18,
+    shadowRadius: 1.00,
+    elevation: 1,
+    paddingHorizontal: 5,
+    paddingVertical: 2,
+    borderRadius: 8,
+  },
+  buttonAdd2: {
+    paddingHorizontal: 10,
+    paddingVertical: 5
+  },
+  containerOrder:{
+    height: '14%',
+    borderTopWidth: 1,
+    borderTopColor: '#00d4df',
+    backgroundColor: '#e9e9e9',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
+  input: {
+    borderBottomWidth: 1,
+    height: 40,
+    borderBottomColor: '#424242'
+  },
+  textOrder: {
+    fontFamily: 'Nunito_700Bold',
+    fontSize: 22,
+    color: '#424242',
+  },
   
 });
 

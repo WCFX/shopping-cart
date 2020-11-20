@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, TextInput } from 'react-native';
 
 import styles from './styles';
 
@@ -22,14 +22,6 @@ const ReviewOrder = () => {
         <View style={styles.containerOrderValue}>
           <Text style={styles.totalItensText}>Total do pedido</Text>
           <Text style={styles.totalItensText}>R$0.00</Text>
-        </View>
-
-        <View style={styles.containerOrder}>
-          <Text style={styles.textOrder}>Observações</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Ex: Tirar cebola, por favor." 
-          />
         </View>
 
         <View style={styles.containerOrder}>

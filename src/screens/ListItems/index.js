@@ -28,39 +28,43 @@ const ListItems = () => {
         renderItem={({ item }) => {
           return(
             <View style={styles.containerItem}>
-              <Text>{}</Text>
+              <View style={styles.principalFood}>
+
               <TouchableOpacity 
                 onPress={() => {}}
                 style={styles.buttonFood}
               >
                 <Text style={styles.textFood}>
+                  
                 {'   '}{item.food}
                 </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={[styles.buttonAdd, styles.buttonAdd2]}>
+
                 <Text 
-                style={styles.textPrice}>R${item.price}{'      '}
-                  <Feather 
-                    style={{ color: '#ca0d00' }}
-                    name="minus-circle"
-                    size={28}
-                  />       
+                style={styles.textPrice}>
+                  <Feather name="plus-circle" size={20} color="#1eba52" />{' '}
+                  R$ {item.price}
                 </Text>
               </TouchableOpacity>
+            </View>
+            
 
               <View style={styles.sideDishContainerColumn}>
                 {item?.sideDish?.map((itemMap, index) => (
-                <View
+              <View
                 key={index}
                 style={styles.sideDishContainerRow}>
                   <Text style={styles.textSideDish}>
+                    
                   {'   '}{itemMap.condition}
                   </Text>
-                  <Text style={styles.textPrice}>R${itemMap.price}{'      '}
-                    <Feather 
-                      style={{ color:'#ca0d00' }}
-                      name="minus-circle"
-                      size={28}
-                    /> 
-                  </Text>
+                <TouchableOpacity style={styles.buttonAdd}>
+                  <Text style={styles.textPrice}>
+                  <Feather name="plus-circle" size={20} color="#1eba52"/>{'  '}
+                  R$ {itemMap.price}</Text>
+                </TouchableOpacity>
+                
                 </View>
                 ))}
               </View>
@@ -72,6 +76,13 @@ const ListItems = () => {
       >
 
       </FlatList>
+      <View style={styles.containerOrder}>
+        <Text style={styles.textOrder}>Observações</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Ex: Tirar cebola, por favor." 
+        />
+      </View>
     </SafeAreaView>
   );
 }

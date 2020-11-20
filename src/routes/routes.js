@@ -15,7 +15,6 @@ export default function routes(){
     <NavigationContainer>
       <Navigator 
         screenOptions={{
-          title: 'Finalizar Pedido',
           headerStyle: {
             backgroundColor: '#00d4df',
           },
@@ -24,12 +23,16 @@ export default function routes(){
         >
         <Screen
           options={{
-            headerShown: false
+            headerShown: false,
           }}
           name="Home"
           component={Home}
           />
         <Screen
+          options={{
+            title: 'Delicatessen CasaNova',
+            headerTitleAlign: 'center'
+          }}
           name="ListItems"
           component={cartRoutes}
         />

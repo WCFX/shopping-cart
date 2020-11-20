@@ -23,14 +23,14 @@ const Home = () => {
         source={backgroundImg}
         style={styles.backgroundImg}
       >
-        <Text style={styles.title}>Vamos para o {'\n'}seu carrinho ?</Text>
+        <Text style={styles.title}>Venha conhecer{'\n'}nosso cardápio</Text>
         <TouchableOpacity
           onPress={handleNavigateToPayment}  
           style={styles.buttonOrder}
         >
           <Text style={styles.buttonOrderText}>
-            <Feather name="shopping-cart" size={24} />
-            {'   '}CARRINHO DE COMPRAS
+            <Feather name="coffee" size={24} />
+            {'   '}BORA MATAR A FOME ?
             </Text>
         </TouchableOpacity>
       </ImageBackground>

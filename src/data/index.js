@@ -23,7 +23,7 @@ import React from 'react';
     },
     {
       id: '3', 
-      food: '6 Esfirras',
+      food: 'Pack 12 Esfirras',
       price: '4.00',
       sideDish: [
         {
@@ -51,6 +51,10 @@ import React from 'react';
           price: '0.00'
         },
         {
+          condition: 'Normal',
+          price: '0.00'
+        },
+        {
           condition: 'Molho Barbecue',
           price: '1.50'
         },
@@ -68,7 +72,7 @@ import React from 'react';
       sideDish: [
         {
           condition: 'Molho Supreme',
-          price: '0.00'
+          price: '3.00'
         },
         {
           condition: 'Molho Barbecue',
