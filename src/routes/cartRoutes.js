@@ -9,8 +9,8 @@ import ReviewOrder from '../screens/ReviewOrder';
 const { Navigator, Screen } = createBottomTabNavigator();
 
 function cartRoutes() {
-  return(
-    <Navigator 
+  return (
+    <Navigator
       tabBarOptions={{
         style: {
           elevation: 0,
@@ -43,28 +43,31 @@ function cartRoutes() {
         component={ListItems}
         options={{
           tabBarLabel: 'Produtos',
-          tabBarIcon: ({ color, size, focused }) => {
-            return(
-              <Feather name="heart" size={size} color={focused ? '#f53636' : color} />
-            );
-          }
-        }}  
-
+          tabBarIcon: ({ color, size, focused }) => (
+            <Feather
+              name="heart"
+              size={size}
+              color={focused ? '#f53636' : color}
+            />
+          ),
+        }}
       />
-      <Screen 
+      <Screen
         name="ReviewOrder"
         component={ReviewOrder}
         options={{
           tabBarLabel: 'Carrinho',
-          tabBarIcon: ({ color, size, focused }) => {
-            return(
-              <Feather name="shopping-cart" size={size} color={focused ? '#00d4df' : color} />
-            );
-          }
-        }}    
+          tabBarIcon: ({ color, size, focused }) => (
+            <Feather
+              name="shopping-cart"
+              size={size}
+              color={focused ? '#00d4df' : color}
+            />
+          ),
+        }}
       />
     </Navigator>
-  )
-};
+  );
+}
 
 export default cartRoutes;

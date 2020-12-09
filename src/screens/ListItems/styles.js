@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
   },
   principalFood: {
-    flexDirection:'row',
+    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
@@ -56,25 +55,25 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   buttonAdd: {
-    shadowColor: "#ccc",
+    shadowColor: '#ccc',
     shadowOffset: {
-	    width: 0,
-	    height: 1,
+      width: 0,
+      height: 1,
     },
     shadowOpacity: 0.18,
-    shadowRadius: 1.00,
+    shadowRadius: 1.0,
     elevation: 1,
     paddingHorizontal: 5,
     paddingVertical: 2,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#fff'
+    borderColor: '#fff',
   },
   buttonAdd2: {
     paddingHorizontal: 10,
-    paddingVertical: 5
+    paddingVertical: 5,
   },
-  containerOrder:{
+  containerOrder: {
     height: '14%',
     borderTopWidth: 1,
     borderTopColor: '#00d4df',
@@ -85,15 +84,13 @@ const styles = StyleSheet.create({
   input: {
     borderBottomWidth: 1,
     height: 40,
-    borderBottomColor: '#424242'
+    borderBottomColor: '#424242',
   },
   textOrder: {
     fontFamily: 'Nunito_700Bold',
     fontSize: 22,
     color: '#424242',
   },
-  
 });
-
 
 export default styles;

@@ -7,35 +7,29 @@ import backgroundImg from '../../assets/background-1.jpeg';
 
 import styles from './styles';
 
-
 const Home = () => {
-  
   const { navigate } = useNavigation();
 
-  function handleNavigateToPayment(){
-    navigate('ListItems')
+  function handleNavigateToPayment() {
+    navigate('ListItems');
   }
 
-  return(
+  return (
     <View style={styles.container}>
-      <ImageBackground
-        
-        source={backgroundImg}
-        style={styles.backgroundImg}
-      >
+      <ImageBackground source={backgroundImg} style={styles.backgroundImg}>
         <Text style={styles.title}>Venha conhecer{'\n'}nosso cardápio</Text>
         <TouchableOpacity
-          onPress={handleNavigateToPayment}  
+          onPress={handleNavigateToPayment}
           style={styles.buttonOrder}
         >
           <Text style={styles.buttonOrderText}>
             <Feather name="coffee" size={24} />
             {'   '}BORA MATAR A FOME ?
-            </Text>
+          </Text>
         </TouchableOpacity>
       </ImageBackground>
     </View>
-  )
-}
+  );
+};
 
 export default Home;
